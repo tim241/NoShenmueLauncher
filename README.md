@@ -1,5 +1,5 @@
 # NoShenmueLauncher
-A launcher bypass for shemue 1 & 2 on Steam
+A launcher bypass for shenmue 1 & 2 on Steam
 
 # Usage
 when no arguments have been provided, shenmue 1 will be started.
