@@ -13,12 +13,15 @@ namespace NoShenmueLauncher
         [STAThread]
         static void Main(string[] args)
         {
+            // get directory of launcher executable
+            string gameDir = Path.GetDirectoryName(Process.GetCurrentProcess().MainModule.FileName);
+
             // start shenmue 1 when no arguments have been provided
-            string exec = Path.Combine(Environment.CurrentDirectory, @"sm1\Shenmue.exe");
+            string exec = Path.Combine(gameDir, @"sm1\Shenmue.exe");
 
             // when the argument is 'sm2', launch shenmue 2
             if (args.Length > 0 && args[0] == "sm2")
-                exec = Path.Combine(Environment.CurrentDirectory, @"sm2\Shenmue2.exe");
+                exec = Path.Combine(gameDir, @"sm2\Shenmue2.exe");
 
             // make sure the executable actually exists, if not, display an error
             if(!File.Exists(exec))
